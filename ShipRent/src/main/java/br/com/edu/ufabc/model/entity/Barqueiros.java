@@ -1,10 +1,14 @@
 package br.com.edu.ufabc.model.entity;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Repository;
@@ -25,8 +29,13 @@ public class Barqueiros {
 	private String celular;
 	@Column(name="email", nullable=false)
 	private String email;
+	private String senha;
+	@Column(name="rg", nullable=false)
 	
-	
+	//chave estrangeira, n barcos para 1 barqueiro
+	@OneToMany(mappedBy="id")
+	private Collection<Barcos> barcos = new ArrayList<Barcos>();
+
 	public Long getId() {
 		return id;
 	}
@@ -57,6 +66,21 @@ public class Barqueiros {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public Collection<Barcos> getBarcos() {
+		return barcos;
+	}
+
+	public void setBarcos(Collection<Barcos> barcos) {
+		this.barcos = barcos;
+	}
+	
+	
 	
 	
 	

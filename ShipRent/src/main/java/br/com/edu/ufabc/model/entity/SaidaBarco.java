@@ -1,10 +1,14 @@
 package br.com.edu.ufabc.model.entity;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Repository;
@@ -32,6 +36,9 @@ public class SaidaBarco {
 	@Column(name="preco", nullable=false)
 	private String preco; //A ideia e o preco variar conforme as vagas nao preeenchidas
 	
+	//chave estrangeira, 1 saida tem n alugueis
+	@OneToMany(mappedBy="id")
+	private Collection<OrdemAluguel> aluguel = new ArrayList<OrdemAluguel>();
 	
 	public Long getId() {
 		return id;
@@ -81,6 +88,14 @@ public class SaidaBarco {
 	public void setPreco(String preco) {
 		this.preco = preco;
 	}
+	public Collection<OrdemAluguel> getAluguel() {
+		return aluguel;
+	}
+
+	public void setAluguel(Collection<OrdemAluguel> aluguel) {
+		this.aluguel = aluguel;
+	}
+	
 	
 	
 

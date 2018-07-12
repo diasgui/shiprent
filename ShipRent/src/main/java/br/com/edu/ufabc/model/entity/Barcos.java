@@ -1,10 +1,14 @@
 package br.com.edu.ufabc.model.entity;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Repository;
@@ -23,6 +27,10 @@ public class Barcos {
 	private String capacidade;
 	@Column(name="nome", nullable=false)
 	private String nome;
+
+	//chave estrangeira, 1 barcos para n saidas
+	@OneToMany(mappedBy="id")
+	private Collection<SaidaBarco> saidas = new ArrayList<SaidaBarco>();
 	
 	public Long getId() {
 		return id;
@@ -48,6 +56,14 @@ public class Barcos {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	public Collection<SaidaBarco> getSaidas() {
+		return saidas;
+	}
+
+	public void setSaidas(Collection<SaidaBarco> saidas) {
+		this.saidas = saidas;
+	}
+	
 
 	
 	
