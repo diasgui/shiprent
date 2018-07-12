@@ -21,8 +21,8 @@ public class SaidaBarco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; //Long inicia o atributo com valor default null
-	@Column(name="nome", nullable=false)
-	private String nome;
+	@Column(name="local", nullable=false)
+	private String local;
 	@Column(name="data", nullable=false)
 	private String data; //Referente a saida do porto
 	@Column(name="hora", nullable=false)
@@ -46,11 +46,11 @@ public class SaidaBarco {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getLocal() {
+		return local;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setLocal(String nome) {
+		this.local = nome;
 	}
 	public String getData() {
 		return data;

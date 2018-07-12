@@ -19,7 +19,9 @@ public class OrdemAluguel {
 	private Long id; //Long inicia o atributo com valor default null
 	@Column(name="alugandovagas", nullable=false)
 	private String alugandovagas; //Quantidade de vagas que estao sendo alugadas
-
+	@Column(name="observacao")
+	private String observacao; //Quantidade de vagas que estao sendo alugadas
+	
 	public Long getId() {
 		return id;
 	}
@@ -32,6 +34,13 @@ public class OrdemAluguel {
 	public void setAlugandovagas(String alugandovagas) {
 		this.alugandovagas = alugandovagas;
 	}
+	public String getObservacao() {
+		return observacao;
+	}
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+	
 	
 	
 	
