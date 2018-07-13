@@ -6,7 +6,7 @@
 <title>Menu</title>
 </head>
 <body>		
-		<h1>Login: NÃO IMPLEMENTADO AINDA</h1>
+			<h4>Login: NÃ£o implementado ainda</h4>
 		<label>email:<input name="email" type="textinput" required></label><br />
 		<label>senha:<input name="senha" type="textinput" required></label><br />
 		
