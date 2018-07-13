@@ -25,7 +25,7 @@ public class BarqueirosController {
 	
 	@RequestMapping(value="/barqueiros/save", method=RequestMethod.POST)
 	public RedirectView save(@RequestParam String nome, @RequestParam String telefone, 
-			@RequestParam String celular,@RequestParam String email,@RequestParam String senha) {
+			@RequestParam String celular,@RequestParam String email,@RequestParam String senha,@RequestParam String rg) {
 		System.out.println("controllerBarqueiros");
 		
 		Barqueiros b = new Barqueiros();
@@ -35,6 +35,7 @@ public class BarqueirosController {
 		b.setCelular(celular);
 		b.setEmail(email);
 		b.setSenha(senha);
+		b.setRg(rg);
 		
 		bDAO.save(b);
 		return new RedirectView("/");
