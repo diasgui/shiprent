@@ -27,7 +27,12 @@ public class Barcos {
 	private String capacidade;
 	@Column(name="nome", nullable=false)
 	private String nome;
-
+	@Column(name="fechada", nullable=false)
+	private Boolean fechada;
+	// 0 é aberta
+	// 1 é fechada
+	// De padrão será aberta
+	
 	//chave estrangeira, 1 barcos para n saidas
 	@OneToMany(mappedBy="id")
 	private Collection<SaidaBarco> saidas = new ArrayList<SaidaBarco>();
@@ -63,6 +68,15 @@ public class Barcos {
 	public void setSaidas(Collection<SaidaBarco> saidas) {
 		this.saidas = saidas;
 	}
+	
+	public Boolean getFechada() {
+		return fechada;
+	}
+	
+	public void setFechada(Boolean fechada) {
+		this.fechada = fechada;
+	}
+	
 	
 
 	

@@ -31,6 +31,7 @@ public class BarcosController {
 		b.setCapacidade(capacidade);
 		b.setNome(nome);
 		b.setTipo(tipo);
+		b.setFechada(false);
 		
 		bDAO.save(b);
 		return new RedirectView("/");
