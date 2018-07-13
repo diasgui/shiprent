@@ -29,8 +29,10 @@ public class Barqueiros {
 	private String celular;
 	@Column(name="email", nullable=false)
 	private String email;
+	@Column(name="senha", nullable=false)
 	private String senha;
 	@Column(name="rg", nullable=false)
+	private String rg;
 	
 	//chave estrangeira, n barcos para 1 barqueiro
 	@OneToMany(mappedBy="id")
@@ -72,6 +74,14 @@ public class Barqueiros {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+	public String getRg() {
+		return rg;
+	}
+	
 	public Collection<Barcos> getBarcos() {
 		return barcos;
 	}
