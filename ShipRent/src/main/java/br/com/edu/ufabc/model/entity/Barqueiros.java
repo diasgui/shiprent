@@ -87,8 +87,8 @@ public class Barqueiros {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getRg() {
-		return rg;
+	public String getCpf() {
+		return cpf;
 	}
 	
 	public Collection<Barcos> getBarcos() {
