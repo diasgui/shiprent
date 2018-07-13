@@ -33,6 +33,8 @@ public class Barqueiros {
 	private String senha;
 	@Column(name="rg", nullable=false)
 	private String rg;
+	@Column(name="cpf", nullable=false)
+	private String cpf;
 	
 	//chave estrangeira, n barcos para 1 barqueiro
 	@OneToMany(mappedBy="id")
@@ -77,6 +79,13 @@ public class Barqueiros {
 	
 	public void setRg(String rg) {
 		this.rg = rg;
+	}
+	public String getRg() {
+		return rg;
+	}
+	
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	public String getRg() {
 		return rg;
