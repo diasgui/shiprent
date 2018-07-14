@@ -21,8 +21,8 @@ public class OrdemAluguel {
 	private String alugandovagas; //Quantidade de vagas que estao sendo alugadas
 	@Column(name="observacao")
 	private String observacao; //Quantidade de vagas que estao sendo alugadas
-	@Column(name="criarSaídaNova")
-	private String criarSaídaNova; 
+	@Column(name="criarSaidaNova")
+	private String criarSaidaNova; 
 	
 	public Long getId() {
 		return id;
@@ -42,11 +42,11 @@ public class OrdemAluguel {
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
 	}
-	public String getCriarSaídaNova() {
-		return criarSaídaNova;
+	public String getCriarSaidaNova() {
+		return criarSaidaNova;
 	}
-	public void setCriarSaídaNova(String criarSaídaNova) {
-		this.criarSaídaNova = criarSaídaNova;
+	public void setCriarSaidaNova(String criarSaidaNova) {
+		this.criarSaidaNova = criarSaidaNova;
 	}
 	
 	
