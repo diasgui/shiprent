@@ -29,9 +29,9 @@ public class Barcos {
 	private String nome;
 	@Column(name="fechada", nullable=false)
 	private Boolean fechada;
-	// 0 é aberta
-	// 1 é fechada
-	// De padrão será aberta
+	// 0 eh aberta
+	// 1 eh fechada
+	// De padrÃ£o serÃ¡ aberta
 	
 	//chave estrangeira, 1 barcos para n saidas
 	@OneToMany(mappedBy="id")
