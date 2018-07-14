@@ -31,7 +31,7 @@ public class Barcos {
 	private Boolean fechada;
 	// 0 eh aberta
 	// 1 eh fechada
-	// De padrão será aberta
+	// De padrao sera aberta
 	
 	//chave estrangeira, 1 barcos para n saidas
 	@OneToMany(mappedBy="id")
