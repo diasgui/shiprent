@@ -25,6 +25,11 @@ public class ClientesController {
 		return mv;
 	}
 	
+	@RequestMapping(value= {"/inicial_clientes"})
+	public ModelAndView inicio() {
+		return new ModelAndView("inicial_clientes");
+	}
+	
 	@RequestMapping(value="/cliente/save", method=RequestMethod.POST)
 	public RedirectView save(@RequestParam String nome, @RequestParam String telefone, 
 			@RequestParam String celular,@RequestParam String email, @RequestParam String rg, 

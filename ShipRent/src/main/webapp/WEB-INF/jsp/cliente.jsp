@@ -18,6 +18,8 @@
 
 		<input type="submit" name="action" value="Enviar" />
 	</form>
-
+	
+	<br>
+	<a href="/inicial_clientes"> Voltar</a>
 </body>
 </html>

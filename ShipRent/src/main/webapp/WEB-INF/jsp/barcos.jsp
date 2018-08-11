@@ -13,6 +13,8 @@
 		<label>nome:<input name="nome" type="textinput" required></label><br /> 
 		<input type="submit" name="action" value="Enviar" />
 	</form>
-
+	
+	<br>
+	<a href="/inicial_barqueiros">Voltar</a>
 </body>
 </html>
