@@ -36,9 +36,30 @@ public class SaidaBarco {
 	@Column(name="preco", nullable=false)
 	private String preco; //A ideia e o preco variar conforme as vagas nao preeenchidas
 	
-	//chave estrangeira, 1 saida tem n alugueis
-	@OneToMany(mappedBy="id")
-	private Collection<OrdemAluguel> aluguel = new ArrayList<OrdemAluguel>();
+	//chave estrangeira, ordem de aluguel 
+	@ManyToOne
+	@JoinColumn(name="ordemaluguel_id")	
+	private OrdemAluguel ordemAluguel;
+	
+	//chave estrangeira, barcos
+	@ManyToOne
+	@JoinColumn(name="barcos_id")	
+	private Barcos barco;
+	
+	public OrdemAluguel getOrdemAluguel() {
+		return ordemAluguel;
+	}
+	public void setOrdemAluguel(OrdemAluguel ordemAluguel) {
+		this.ordemAluguel = ordemAluguel;
+	}
+	
+	public Barcos getBarco() {
+		return barco;
+	}
+	public void setBarco(Barcos barco) {
+		this.barco = barco;
+	}
+	
 	
 	public Long getId() {
 		return id;
@@ -88,15 +109,4 @@ public class SaidaBarco {
 	public void setPreco(String preco) {
 		this.preco = preco;
 	}
-	public Collection<OrdemAluguel> getAluguel() {
-		return aluguel;
-	}
-
-	public void setAluguel(Collection<OrdemAluguel> aluguel) {
-		this.aluguel = aluguel;
-	}
-	
-	
-	
-
 }
