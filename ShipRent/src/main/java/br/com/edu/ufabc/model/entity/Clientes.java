@@ -36,11 +36,6 @@ public class Clientes {
 	@Column(name="cpf", nullable=false)
 	private String cpf;
 	
-	//chave estrangeira, 1 cliente tem n alugueis
-	@OneToMany(mappedBy="id")
-	private Collection<OrdemAluguel> aluguel = new ArrayList<OrdemAluguel>();
-			
-	
 	public Long getId() {
 		return id;
 	}
@@ -88,15 +83,6 @@ public class Clientes {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public Collection<OrdemAluguel> getAluguel() {
-		return aluguel;
-	}
-
-	public void setAluguel(Collection<OrdemAluguel> aluguel) {
-		this.aluguel = aluguel;
-	}
-	
-		
+	}	
 	
 }
