@@ -24,6 +24,19 @@ public class OrdemAluguel {
 	@Column(name="criarSaidaNova")
 	private String criarSaidaNova; 
 	
+	//chave que refere cliente com ordem de saida, cada ordem de saida se refere a 1 cliente
+	//, sendo que o cliente pode ter varias ordens de saida
+	@ManyToOne
+	@JoinColumn(name="cliente_id")	
+	private Cliente cliente;
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
 	public Long getId() {
 		return id;
 	}
