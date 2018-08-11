@@ -36,10 +36,6 @@ public class Barqueiros {
 	@Column(name="cpf", nullable=false)
 	private String cpf;
 	
-	//chave estrangeira, n barcos para 1 barqueiro
-	@OneToMany(mappedBy="id")
-	private Collection<Barcos> barcos = new ArrayList<Barcos>();
-
 	public Long getId() {
 		return id;
 	}
@@ -90,16 +86,7 @@ public class Barqueiros {
 	public String getCpf() {
 		return cpf;
 	}
-	
-	public Collection<Barcos> getBarcos() {
-		return barcos;
-	}
-
-	public void setBarcos(Collection<Barcos> barcos) {
-		this.barcos = barcos;
-	}
-	
-	
+		
 	
 	
 	

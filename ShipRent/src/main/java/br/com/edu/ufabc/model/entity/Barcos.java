@@ -33,9 +33,18 @@ public class Barcos {
 	// 1 eh fechada
 	// De padrao sera aberta
 	
-	//chave estrangeira, 1 barcos para n saidas
-	@OneToMany(mappedBy="id")
-	private Collection<SaidaBarco> saidas = new ArrayList<SaidaBarco>();
+	//1 barco se refere a 1 barqueiro, porem cada barqueiro pode ter n barcos
+	@ManyToOne
+	@JoinColumn(name="barqueiros_id")	
+	private Barqueiros barqueiros;
+	
+	public Barqueiros getBarqueiros() {
+		return barqueiros;
+	}
+	public void setBarqueiros(Barqueiros barqueiros) {
+		this.barqueiros = barqueiros;
+	}
+	
 	
 	public Long getId() {
 		return id;
@@ -76,10 +85,5 @@ public class Barcos {
 	public void setFechada(Boolean fechada) {
 		this.fechada = fechada;
 	}
-	
-	
-
-	
-	
 	
 }
