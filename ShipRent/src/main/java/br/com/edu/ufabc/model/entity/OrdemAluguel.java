@@ -28,12 +28,12 @@ public class OrdemAluguel {
 	//, sendo que o cliente pode ter varias ordens de saida
 	@ManyToOne
 	@JoinColumn(name="cliente_id")	
-	private Cliente cliente;
+	private Clientes cliente;
 	
-	public Cliente getCliente() {
+	public Clientes getCliente() {
 		return cliente;
 	}
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Clientes cliente) {
 		this.cliente = cliente;
 	}
 	
