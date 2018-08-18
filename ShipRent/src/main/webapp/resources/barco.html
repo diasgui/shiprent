@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+<link href="./resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./resources/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="./resources/js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="./resources/js/bootstrap.min.js"></script> 
+
+</head>
+<body>
+	<div id="divBarco">
+		<form id="barcos" action="/barcos/save" method="POST">
+			<label>tipo:<input name="tipo" type="textinput" required></label><br />
+			<label>capacidade:<input name="capacidade" type="textinput" required></label><br />
+			<label>nome:<input name="nome" type="textinput" required></label><br /> 
+			<input type="submit" name="action" value="Enviar" />
+		</form>
+	
+		<br>
+		<a href="/inicial_barqueiros">Voltar</a>
+	</div>
+</body>
+</html>

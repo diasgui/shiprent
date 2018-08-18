@@ -49,4 +49,8 @@ public class ClientesController {
 		cDAO.save(c);
 		return new RedirectView("/");
 	}
+	
+	public String ValidaUsuario(String email, String password) {
+		return "ok";
+	}
 }
