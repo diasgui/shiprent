@@ -9,11 +9,15 @@
 		<a href="/barcos">Cadastro de Barcos</a><br />
 		
 		<a href="/inicial_barqueiros/listaembarcacoes">Lista de Embarcações</a>	
+		<h2>Lista de saidas proximas:</h2>
 		
-		<a href="/inicial_barqueiros/novasaida">Cadastrar nova saída </a><br>
-			
-			
-		<a href="/inicial_barqueiros/listasaidas">Lista de saidas</a><br>
+			<h4>Não implementado ainda</h4><br /><br />
+		<h2>Lista de com vagas em aberto:</h2>
+			<h4>Não implementado ainda</h4><br />
+		<h2>Lista de sem vagas:</h2>
+			<h4>Não implementado ainda</h4><br /><br />
+		<h2>Historico de saidas.</h2>		
+			<h4>Não implementado ainda</h4><br />
 		
 		<a href="/barqueiros">Cadastro de Barqueiros</a>
 		<br>
