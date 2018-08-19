@@ -44,4 +44,17 @@ public class LoginController {
 		return response;
 	}
 	
+	
+	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
+	public @ResponseBody String CadastraUsuario(@RequestParam("email") String email, @RequestParam("password") String password) {
+		
+		Usuario usuario = new Usuario();
+		
+		usuario.setEmail(email);
+		usuario.setSenha(password);
+		
+		lDAO.save(usuario);
+		
+		return "Usuario Cadastrado com Sucesso";
+	}
 }

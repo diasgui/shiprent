@@ -29,30 +29,19 @@ pageEncoding="UTF-8"%>
 	 });
 	
 	$(document).ready(function() {
-		$('#form1').submit(function(event){
-			event.preventDefault();
-			
-			var firstname = $('#email').val();
-            var lastname = $('#password').val();                
-            var data = 'email='
-                    + encodeURIComponent(firstname)
-                    + '&password='
-                    + encodeURIComponent(lastname);
-			
-			$.ajax({
-				url: "/login" ,
-				data: data,
-				type: "GET",
-				success: function(response){
-					alert(response);
-				},
-				error : function(xhr, status, error) {
-                    alert(xhr.responseText);
-                }
-			});
-			return false;
-		});
-	});
+	    $("#linkCadastro").click(function(event){
+	    	event.preventDefault();
+	       $('#modalBody').load('/resources/usuarioCadastro.html');
+	    });
+ 	});
+	
+	$(document).ready(function() {
+    	$("#linkEntrar").click(function(event){
+		   event.preventDefault();
+	       $('#modalBody').load('/resources/usuarioLogin.html');
+	    });
+	 });
+	
 	
 </script> 
 </head>
@@ -62,7 +51,7 @@ pageEncoding="UTF-8"%>
 	  <p>O maior portal de anúncios e alocação de embarcações do Brasil!</p>
 	</div>
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -86,19 +75,19 @@ pageEncoding="UTF-8"%>
 				<li class="nav-item">
 					<a href="#" id="linkSobre" class="nav-link active">Sobre</a>
 				</li>
+				<li class="nav-item" style="padding-left: 1030px; padding-right: 10px">
+					<button type="button" id="linkCadastro" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+					   Cadastrar-se
+					</button>
+				</li>
+				<li class="nav-item" >
+					<button type="button" id="linkEntrar" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+					   Entrar
+					</button>
+				</li>
+				
 			</ul>
 		</div>
-		<form class="form-inline" id="form1" method="POST">   
-		  <div class="form-group" id="divLogin">  
-		    <label id="lbl1" for="exampleInputEmail1" style="color:white; padding-top:5px; padding-right:5px">Email address</label>  
-		    <input type="email" class="form-control-sm" id="email" placeholder="Digite o seu e-mail">
-		    
-		    <label for="exampleInputPassword1" style="color:white; padding:5px">Password</label>
-		    <input type="password" class="form-control-sm" id="password" placeholder="Digite a sua senha" style="padding-right:5x">
-		    
-		    <button type=submit id="buttonLogin" class="btn btn-sm">Login</button>     
-		  </div>  
-		</form>
 	</nav>
 	<div>
 		<div class="row">
@@ -118,5 +107,33 @@ pageEncoding="UTF-8"%>
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<!-- The Modal -->
+		<div class="modal" id="myModal" tabindex="-1">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		    
+		      <!-- Modal Header -->
+		     <div class="modal-header">
+		       <h4 class="modal-title">Login/Cadastro</h4>
+		       <button type="button" class="close" data-dismiss="modal">&times;</button>
+		     </div>
+		     
+		     <!-- Modal body -->
+		     <div class="modal-body" id="modalBody">
+		       Modal body..
+		     </div>
+		     
+		     <!-- Modal footer -->
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      </div>
+		      
+		    </div>
+		  </div>
+		</div>
+	</div>
+  
+</div>
 </body>
 </html>
