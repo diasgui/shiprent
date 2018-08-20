@@ -42,6 +42,19 @@ pageEncoding="UTF-8"%>
 	    });
 	 });
 	
+/* 	$(document).ready(function() {
+    	$("#linkAluguel").click(function(event){
+		   event.preventDefault();
+	       $('#div1').load('/resources/jsp/listasaidas.jsp');
+	    });
+	 }); */
+	
+	$(document).ready(function() {
+    	$("#linkSobre").click(function(event){
+		   event.preventDefault();
+	       $('#div1').load('/resources/about.html');
+	    });
+	 });
 	
 </script> 
 </head>
@@ -61,16 +74,13 @@ pageEncoding="UTF-8"%>
 					<a href="/" id="linkPrincipal" class="nav-link active">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" id="linkInicialBarqueiros" class="nav-link active">Tela inicial Barqueiros</a>
+					<a href="#" id="linkInicialBarqueiros" class="nav-link active">Barqueiros</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" id="linkInicialClientes" class="nav-link active">Tela inicial Cliente</a>
+					<a href="#" id="linkInicialClientes" class="nav-link active">Cliente</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" id="linkAluguel" class="nav-link active">Aluguel de barcos</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" id="linkEvento" class="nav-link active">Eventos</a>
+					<a href="/inicial_clientes/listasaidas" id="linkAluguel" class="nav-link active">Locação</a>
 				</li>
 				<li class="nav-item">
 					<a href="#" id="linkSobre" class="nav-link active">Sobre</a>
@@ -85,7 +95,6 @@ pageEncoding="UTF-8"%>
 					   Entrar
 					</button>
 				</li>
-				
 			</ul>
 		</div>
 	</nav>

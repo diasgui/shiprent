@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,8 +10,7 @@
 <title>Barcos Cadastro</title>
 </head>
 <body>
-
-	<form id="saidda" action="/inicial_barqueiros/save" method="POST">
+	<form id="saida" action="/inicial_barqueiros/save" method="POST">
 		<label>Local:<input name="local" type="text" required></label><br />
 		<label>Data:<input name="data" type="date" required></label><br />
 		<label>Hora:<input name="hora" type="time" required></label><br />
@@ -21,10 +24,8 @@
 		<label>Duração:<input name="duracao" type="number" required>horas</label><br />
 		<label>Preço:<input name="preco" type="number" step="0.01" required></label><br />
 		<label>Fechada:<input name="fechada" type="text" required></label><br />
+		<label>Id do Barco: <input name="barcoid" type="number" required></label><br>
 		<input type="submit" name="action" value="Enviar" />
 	</form>
-	
-	<br>
-	<a href="/inicial_barqueiros">Voltar</a>
 </body>
 </html>

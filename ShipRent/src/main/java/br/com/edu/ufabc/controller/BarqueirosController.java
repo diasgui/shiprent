@@ -16,21 +16,9 @@ public class BarqueirosController {
 	@Autowired
 	BarqueirosDAO bDAO;
 	
-
-	@RequestMapping(value= {"/barqueiros"})	
-	public ModelAndView barqueiros() {
-		ModelAndView mv = new ModelAndView("barqueiros");
-		return mv;
-	}
-	
-	@RequestMapping(value= {"/inicial_barqueiros"})
-	public ModelAndView inicio() {
-		return new ModelAndView("inicial_barqueiros");
-	}
-	
 	@RequestMapping(value="/barqueiros/save", method=RequestMethod.POST)
 	public RedirectView save(@RequestParam String nome, @RequestParam String telefone, 
-			@RequestParam String celular,@RequestParam String email,@RequestParam String senha,@RequestParam String rg,@RequestParam String cpf) {
+			@RequestParam String celular, @RequestParam String email, @RequestParam String cpf) {
 		System.out.println("controllerBarqueiros");
 		
 		Barqueiros b = new Barqueiros();
@@ -39,12 +27,9 @@ public class BarqueirosController {
 		b.setTelefone(telefone);
 		b.setCelular(celular);
 		b.setEmail(email);
-		b.setSenha(senha);
-		b.setRg(rg);
 		b.setCpf(cpf);
 		
 		bDAO.save(b);
 		return new RedirectView("/");
 	}
-	
 }

@@ -13,14 +13,11 @@
 <body>
 	<div id="divBarco">
 		<form id="barcos" action="/barcos/save" method="POST">
-			<label>tipo:<input name="tipo" type="textinput" required></label><br />
-			<label>capacidade:<input name="capacidade" type="textinput" required></label><br />
-			<label>nome:<input name="nome" type="textinput" required></label><br /> 
+			<label>tipo:<input name="tipo" type="text" required></label><br />
+			<label>capacidade:<input name="capacidade" type="number" required></label><br />
+			<label>nome:<input name="nome" type="text" required></label><br /> 
 			<input type="submit" name="action" value="Enviar" />
 		</form>
-	
-		<br>
-		<a href="/inicial_barqueiros">Voltar</a>
 	</div>
 </body>
 </html>

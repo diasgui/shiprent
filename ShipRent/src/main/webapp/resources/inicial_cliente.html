@@ -8,23 +8,28 @@
 <script type="text/javascript" src="./resources/js/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="./resources/js/bootstrap.min.js"></script> 
+<script type="text/javascript" >
+	$(document).ready(function() {
+	    $("#minhasSaidas").click(function(event){
+	       $('#divBarqueiro').load('/resources/jsp/minhassaidas.jsp');
+	    });
+	 });
+	 
+	$(document).ready(function() {
+	    $("#clientes").click(function(event){
+	       $('#divBarqueiro').load('/resources/jsp/cliente.jsp');
+	    });
+	 });
+</script>
 </head>
 <body>
-	<div id="divTeste" class="container" style="width: 100%">
-			<h2>Suas saídas</h2>
-				<h4>Não implementado ainda</h4><br />
-			<h2>Criar uma saida(particular ou pública)</h2>
-				<h4>Não implementado ainda</h4>	<br /><br />
-			<h2>Lista de saidas proximas:</h2>
-				<h4>Não implementado ainda</h4><br />
-			<h2>Lista de com vagas em aberto:</h2>
-				<h4>Não implementado ainda</h4><br />
-				
-			<a href="/clientes">Cadastro de Clientes</a><br />
-			
-			<br>
-			<a href="/">Sair</a>
+	<div class="container-fluid" id="divBarqueiro">
 		
-		</div>
+		<form id="minhassaidas" action="/inicial_clientes/minhassaidas" method="post">
+			CPF: <input name="cpf" id="cpf" type="text" required>
+			<button id="minhasSaidas">Minhas Saidas</button><br />
+		</form>
+		<button id="clientes">Cadastro de Clientes</button><br />
+	</div>
 </body>
 </html>

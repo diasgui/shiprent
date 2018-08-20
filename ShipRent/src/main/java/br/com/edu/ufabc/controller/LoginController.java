@@ -39,7 +39,7 @@ public class LoginController {
 		if(achou)
 			response = "Login efetuado com sucesso!";
 		else
-			response = "E-mail n„o cadastrado!";
+			response = "E-mail n√£o cadastrado!";
 
 		return response;
 	}

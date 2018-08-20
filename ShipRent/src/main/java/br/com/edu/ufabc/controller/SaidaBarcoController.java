@@ -5,8 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
+import br.com.edu.ufabc.model.dao.BarcosDAO;
+import br.com.edu.ufabc.model.dao.BarqueirosDAO;
+import br.com.edu.ufabc.model.dao.ClientesDAO;
 import br.com.edu.ufabc.model.dao.SaidaBarcoDAO;
+import br.com.edu.ufabc.model.entity.Barcos;
+import br.com.edu.ufabc.model.entity.Clientes;
 import br.com.edu.ufabc.model.entity.SaidaBarco;
 
 @Controller
@@ -15,10 +21,8 @@ public class SaidaBarcoController {
 	@Autowired
 	SaidaBarcoDAO saidaDao;
 	
-	@RequestMapping(value= {"/inicial_clientes/novasaida"})
-	public ModelAndView novasaida() {
-		return new ModelAndView("novasaida");
-	}
+	@Autowired
+	BarcosDAO bDAO;
 	
 	@RequestMapping(value= {"/inicial_clientes/listasaidas"})
 	public ModelAndView listarsaidas() {
@@ -33,11 +37,12 @@ public class SaidaBarcoController {
 	}
 	
 	@RequestMapping(value= {"/inicial_barqueiros/save"})
-	public ModelAndView novasaidabarco(@RequestParam String local, @RequestParam String data, @RequestParam String hora,
-			@RequestParam String vagas, @RequestParam String tipo, @RequestParam String duracao,
-			@RequestParam String preco, @RequestParam String fechada) {
+	public RedirectView novasaidabarco(@RequestParam String local, @RequestParam String data, @RequestParam String hora,
+			@RequestParam Long vagas, @RequestParam String tipo, @RequestParam String duracao,
+			@RequestParam String preco, @RequestParam String fechada, @RequestParam Long barcoid) {
 		
 		SaidaBarco saida = new SaidaBarco();
+		Barcos barco = bDAO.getOne(barcoid);
 		
 		saida.setLocal(local);
 		saida.setData(data);
@@ -46,9 +51,10 @@ public class SaidaBarcoController {
 		saida.setTipo(tipo);
 		saida.setDuracao(duracao);
 		saida.setPreco(preco);
+		saida.setBarco(barco);
 		
 		saidaDao.save(saida);
 		
-		return new ModelAndView("inicial_barqueiros");
+		return new RedirectView("/");
 	}
 }

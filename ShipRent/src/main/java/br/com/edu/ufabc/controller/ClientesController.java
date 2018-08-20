@@ -21,21 +21,10 @@ public class ClientesController {
 	@Autowired
 	ClientesDAO cDAO;
 	
-	@RequestMapping(value= {"/clientes"})	
-	public ModelAndView cliente() {
-		ModelAndView mv = new ModelAndView("cliente");
-		return mv;
-	}
-	
-	@RequestMapping(value= {"/inicial_clientes"})
-	public ModelAndView inicio() {
-		return new ModelAndView("inicial_clientes");
-	}
-	
 	@RequestMapping(value="/cliente/save", method=RequestMethod.POST)
 	public RedirectView save(@RequestParam String nome, @RequestParam String telefone, 
-			@RequestParam String celular,@RequestParam String email, @RequestParam String rg, 
-			@RequestParam String cpf,@RequestParam String senha) {
+			@RequestParam String celular,@RequestParam String email, 
+			@RequestParam String cpf) {
 		System.out.println("controllerCliente");
 		
 		Clientes c = new Clientes();
@@ -44,9 +33,7 @@ public class ClientesController {
 		c.setTelefone(telefone);
 		c.setCelular(celular);
 		c.setEmail(email);
-		c.setRg(rg);
 		c.setCpf(cpf);
-		c.setSenha(senha);
 		
 		cDAO.save(c);
 		return new RedirectView("/");

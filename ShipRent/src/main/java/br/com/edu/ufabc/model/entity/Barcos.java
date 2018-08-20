@@ -23,12 +23,16 @@ public class Barcos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; //Long inicia o atributo com valor default null
+	
 	@Column(name="tipo", nullable=false)
 	private String tipo; //Referente a lancha e barcos,rio e mar 
+	
 	@Column(name="capacidade", nullable=false)
-	private String capacidade;
+	private Long capacidade;
+	
 	@Column(name="nome", nullable=false)
 	private String nome;
+	
 	@Column(name="fechada", nullable=false)
 	private Boolean fechada;
 	// 0 eh aberta
@@ -60,10 +64,10 @@ public class Barcos {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getCapacidade() {
+	public Long getCapacidade() {
 		return capacidade;
 	}
-	public void setCapacidade(String capacidade) {
+	public void setCapacidade(Long capacidade) {
 		this.capacidade = capacidade;
 	}
 	public String getNome() {

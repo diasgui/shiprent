@@ -16,22 +16,16 @@ public class BarcosController {
 	@Autowired
 	BarcosDAO bDAO;
 	
-	@RequestMapping(value= {"/barcos"})	
-	public ModelAndView barcos() {
-		ModelAndView mv = new ModelAndView("barcos");
-		return mv;
-	}
-	
 	@RequestMapping(value= {"/inicial_barqueiros/listaembarcacoes"})
 	public ModelAndView lista() {
 		ModelAndView mv = new ModelAndView("listaembarcacoes");
 		
-		mv.addObject("barcos", bDAO.findAll());
+		mv.addObject("b", bDAO.findAll());
 		return mv;
 	}
 	
 	@RequestMapping(value="/barcos/save", method=RequestMethod.POST)
-	public RedirectView save(@RequestParam String tipo, @RequestParam String capacidade, 
+	public RedirectView save(@RequestParam String tipo, @RequestParam Long capacidade, 
 			@RequestParam String nome) {
 		System.out.println("controllerBarcos");
 		
