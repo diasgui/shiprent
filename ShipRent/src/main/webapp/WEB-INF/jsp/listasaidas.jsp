@@ -9,6 +9,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="./resources/css/estilo.css" rel="stylesheet" type="text/css">
 <title>Saídas de Embarcações</title>
+<style>
+body {
+	background-image: linear-gradient(to right, lightblue , aqua);
+}
+
+input[type=text], select {
+	width: 100%;
+	padding:12px 20px;
+	margin:	8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing:border-box;
+}
+
+input[type=number], select {
+	width: 100%;
+	padding:12px 20px;
+	margin:	8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing:border-box;
+}
+
+input[type=radio], select {
+	width: 100%;
+	padding:12px 20px;
+	margin:	8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing:border-box;
+}
+
+input[type=submit] { 
+	background-color: #000000;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input [type=submit]:hover {
+	background-color: 
+	#000000;
+}
+#tabelas {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabelas td, #tabelas th {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+</style>
 </head>
 <body>
 <div class="column middle">
