@@ -64,7 +64,7 @@ pageEncoding="UTF-8"%>
 	  <p>O maior portal de anúncios e alocação de embarcações do Brasil!</p>
 	</div>
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -85,7 +85,11 @@ pageEncoding="UTF-8"%>
 				<li class="nav-item">
 					<a href="#" id="linkSobre" class="nav-link active">Sobre</a>
 				</li>
-				<li class="nav-item" style="padding-left: 1030px; padding-right: 10px">
+			</ul>
+		</div>
+		<div class="collapse navbar-collapse flex-grow-0" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item" style="padding-right: 10px">
 					<button type="button" id="linkCadastro" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 					   Cadastrar-se
 					</button>
