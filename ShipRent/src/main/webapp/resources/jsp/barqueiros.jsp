@@ -9,11 +9,11 @@
 
 	<form id="barqueiros" action="/barqueiros/save" method="POST">
 		
-		<label>nome:<input name="nome" type="text" required></label><br />
-		<label>cpf:<input name="cpf" type="text" required></label><br />
-		<label>telefone:<input name="telefone" type="text" required></label><br />
-		<label>celular:<input name="celular" type="text" required></label><br />
-		<label>email:<input name="email" type="text" required></label><br />
+		<label>Come<br><input name="nome" type="text" required></label><br />
+		<label>CPF<br><input name="cpf" type="text" required></label><br />
+		<label>Telefone<br><input name="telefone" type="text" required></label><br />
+		<label>Celular<br><input name="celular" type="text" required></label><br />
+		<label>Email<br><input name="email" type="text" required></label><br />
 
 		<input type="submit" name="action" value="Enviar" />
 	</form>

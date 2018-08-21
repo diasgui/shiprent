@@ -15,7 +15,7 @@ body {
 }
 
 input[type=text], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -25,7 +25,7 @@ input[type=text], select {
 }
 
 input[type=number], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -35,7 +35,7 @@ input[type=number], select {
 }
 
 input[type=radio], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -45,7 +45,7 @@ input[type=radio], select {
 }
 
 input[type=submit] { 
-	background-color: #000000;
+	background-color: #555555;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -55,8 +55,7 @@ input[type=submit] {
 }
 
 input [type=submit]:hover {
-	background-color: 
-	#000000;
+	background-color: #555555;
 }
 #tabelas {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -108,9 +107,9 @@ input [type=submit]:hover {
 		<h3>Alugar Embarcação</h3>
 		<div class="form">
 			<form name="form" action="/inicial_clientes/novasaida" method="post">
-				Id Saída:				<input type="number" name="id"> <br>
-				Quantidade de vagas: 	<input type="number" name="qtd"> <br>
-				CPF:					<input type="text" name="cpf"> <br>
+				Id Saída:<br><input type="number" name="id"> <br>
+				Quantidade de vagas:<br><input type="number" name="qtd"> <br>
+				CPF:<br><input type="text" name="cpf"> <br>
 				<input type="submit" name="action" value="Reservar" />
 			</form>
 		</div>

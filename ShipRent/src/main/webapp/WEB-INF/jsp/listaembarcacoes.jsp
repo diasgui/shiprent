@@ -14,7 +14,7 @@ body {
 	background-image: linear-gradient(to right, lightblue , aqua);
 }
 .btn {
-	background-color: #000000;
+	background-color: #555555;
 	color: white;
 	padding: 12px 20px;
 	display: inline-block;
@@ -24,7 +24,7 @@ body {
 }
 
 input[type=text], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -34,7 +34,7 @@ input[type=text], select {
 }
 
 input[type=number], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -44,7 +44,7 @@ input[type=number], select {
 }
 
 input[type=radio], select {
-	width: 100%;
+	width: 50%;
 	padding:12px 20px;
 	margin:	8px 0;
 	display: inline-block;
@@ -54,7 +54,7 @@ input[type=radio], select {
 }
 
 input[type=submit] { 
-	background-color: #000000;
+	background-color: #555555;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;

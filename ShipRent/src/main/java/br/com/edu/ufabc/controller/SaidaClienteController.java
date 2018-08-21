@@ -57,12 +57,21 @@ public class SaidaClienteController {
 		System.out.println(cli.getNome());
 		
 		SaidaCliente saidacli = new SaidaCliente();
-
+		
+		if(qtd <= saidabarco.getVagas()) {
 			saidacli.setCliente(cli);
 			saidacli.setSaidabarco(saidabarco);
-		
-		saidacliDAO.save(saidacli);
-		
-		return new RedirectView("/");
+			saidacliDAO.save(saidacli);
+			saidabarco.setVagas(saidabarco.getVagas()-qtd);
+			saidabDAO.save(saidabarco);
+			return new RedirectView("/");
+		}
+		else
+			return new RedirectView("/erroCapacidade");
+	}
+	
+	@RequestMapping(value= {"/erroCapacidade"})
+	public ModelAndView erro() {
+		return new ModelAndView("erro");
 	}
 }
